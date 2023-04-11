@@ -1,0 +1,76 @@
+
+div.comments div#mustlogin,
+div.comments div#loggedin,
+div.comments div#comment-notes {
+  font-style: italic;
+  margin: 0 0 1em;
+}
+div.comments span.unapproved {
+  color: #000;
+  display: block;
+  font-style: italic;
+  font-variant: small-caps;
+  margin: 1em auto 0;
+  text-align: center;
+}
+
+div.comments ol.comment-list li div.comment-meta {
+  color: #000;
+  margin: 0 0 -0.3em;
+  padding: 0.5em 0 0;
+}
+div.comments ol.comment-list li div.comment-meta span.comment-author,
+div.comments ol.comment-list li div.comment-meta span.pingback-author {
+  font-weight: 700;
+}
+div.comments ol.comment-list li span.vcard img.photo {
+  border-radius: 50%;
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+div.comments .form-input {
+  margin-bottom: 10px;
+}
+
+
+div.comments ol.comment-list li code,
+div.comments ol.comment-list li pre {
+  font: 1em/150% Arial;
+  display: block;
+  background-color: #f2f7f9;
+  margin: 10px 20px;
+  padding: 10px;
+  border-left: 3px solid #f9903f;
+  color: #0088ff;
+}
+div.entry-content ins,
+div.comments ol.comment-list li ins {
+  background: #cfd5dd;
+  color: #000;
+  font-style: italic;
+  text-decoration: none;
+}
+div.entry-content .caps,
+div.comments ol.comment-list li .caps {
+  font-variant: small-caps;
+}
+h2.page-title span.archive-meta,
+div.comments h3.comment-header span.comment-count {
+  color: #888;
+  display: block;
+  font-size: 0.6em;
+  font-weight: 700;
+  margin: 0 0 0.5em;
+  word-spacing: 0.2em;
+}
+div.entry-content blockquote,
+div.comments ol.comment-list li blockquote {
+  margin: 10px 100px 10px 10px;
+  padding: 1px 15px;
+  border-radius: 8px;
+  /*border-left: 3px solid #cfd5dd;*/
+  background: #f2f2f2;
+  font-size: 14px;
+  font-family: sans-serif !important;
+}

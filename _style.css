@@ -1,0 +1,607 @@
+/*
+  THEME NAME:Barthelme
+  THEME URI:http://www.plaintxt.org/themes/barthelme/
+  DESCRIPTION:A minimalist theme where white space and margins show culture and aestheticism. For WordPress 2.6.x.
+  VERSION:4.7.0
+  AUTHOR:PlainTXT.org
+  AUTHOR URI:http://plaintxt.org/
+  TAGS:variable width,fixed width,two columns,widgets,theme options,options page,white,gray,typography,microformats,hatom,hcard
+  */
+
+@font-face {
+  font-family: pingfang;
+  src: url("/img/PingFangSC_Light.woff2");
+}
+@font-face {
+  font-family: sf;
+  src: url("./sf-pro-display_medium.woff2");
+}
+body {
+  line-height: 250%;
+}
+del {
+  background: #f2f2f2;
+}
+input {
+  font-family: sans-serif !important;
+}
+textarea {
+  resize: none;
+}
+div#content a {
+  color: #7f89a6;
+}
+div#content a:visited {
+  color: #546188;
+}
+div#content a:hover {
+  color: #ff4e00;
+}
+#categories-2 a {
+  transition: 0.2s;
+}
+#categories-2 a:hover {
+  letter-spacing: 1px;
+}
+
+
+
+div#container {
+  float: right;
+  margin: 0 0 0 -210px;
+  width: 100%;
+  background: #eee;
+}
+div.sidebar {
+  background: #eee;
+}
+div#content {
+  margin: 0 0 0 180px;
+  padding: 30px 0;
+  background: url(images/bg.gif) repeat center center;
+}
+body.single div#content,
+body.page div#content {
+  background: #fff;
+  padding: 30px;
+}
+body.single div#content > div,
+body.page div#content > div {
+  max-width: 750px;
+  margin: 0 auto;
+}
+div#content .page-title {
+  font-size: 1.7em;
+  text-align: center;
+}
+body.attachment div#content h3.page-title,
+body.archive div.archive-meta,
+body.page div.archive-meta {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0.2em 0;
+  text-align: center;
+}
+
+body div.access,
+span#theme-link span.additional-name,
+span#theme-link span.family-name {
+  display: none;
+}
+
+body.archive div.archive-meta,
+body.page div.author-meta {
+  margin: 0 auto 2em;
+  width: 50%;
+}
+
+body.archive div.archive-meta p,
+body.page div.archive-meta p {
+  margin: 0.5em auto;
+}
+
+body.attachment div.entry-content div.entry-attachment {
+  margin: 1em 0 0 0;
+  color: #777;
+  text-align: center;
+}
+
+body.home div#content div.entry-meta span.entry-date,
+body.archive div#content div.entry-meta span.entry-date,
+body.search div#content div.entry-meta span.entry-date {
+  margin-bottom: 1.1em;
+}
+
+body.home div#content div.entry-meta,
+body.archive div#content div.entry-meta,
+body.search div#content div.entry-meta {
+  overflow: hidden;
+  text-align: right;
+  width: 120px;
+}
+body.home div#content div.entry-meta {
+  float: left;
+}
+body.archive div#content div.entry-meta,
+body.search div#content div.entry-meta {
+  position: absolute;
+  left: 50%;
+  margin-left: -440px;
+}
+
+body.home div#content div.entry-meta abbr.published,
+body.archive div#content div.entry-meta abbr.published,
+body.search div#content div.entry-meta abbr.published {
+  color: #444;
+  font-size: 1.1em;
+  word-spacing: 0.2em;
+}
+
+body.home div#content div.entry-meta span,
+body.archive div#content div.entry-meta span,
+body.search div#content div.entry-meta span {
+  display: block;
+  margin: 0.2em 0 0.5em;
+}
+
+body.home div#content div.post-container,
+body.archive div#content div.post-container,
+body.search div#content div.post-container {
+  float: right;
+  margin: 0 0 4em -11.5em;
+  width: 100%;
+}
+
+body.home div#content div.post-content,
+body.archive div#content div.post-content,
+body.search div#content div.post-content {
+  clear: both;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background: #fff;
+  max-width: 750px;
+}
+body.home div#content div.post-content {
+  margin: 0 50px 0 135px;
+}
+
+body.date div#content h2.page-title,
+body.search div#content h2.page-title {
+  margin-bottom: 1.5em;
+}
+
+body.single div.entry-date,
+body.single div.entry-meta {
+  color: #888;
+  font-size: 1em;
+  line-height: 150%;
+  text-align: center;
+}
+
+body.single .entry-date {
+  word-spacing: 0.5em;
+}
+
+body.single div.hentry h2.entry-title,
+body.page div.hentry h2.entry-title {
+  font-size: 1.7em;
+  font-weight: 400;
+  text-align: center;
+}
+
+body.single span.entry-published,
+body.single span.entry-rsslink,
+body.single span.cat-links,
+body.single span.tag-links {
+  display: block;
+}
+
+/*div#wrapper .html,*/
+div#wrapper .download,
+div#wrapper .pdf,
+div#wrapper .zip {
+  margin-left: 2px;
+  padding: 2px 0 2px 19px;
+}
+div#wrapper .download {
+  background: url(images/file-download.png) no-repeat center left;
+}
+/*
+div#wrapper .html{background:url(images/file-html.png) no-repeat center left;}
+*/
+div#wrapper .pdf {
+  background: url(images/file-pdf.png) no-repeat center left;
+}
+div#wrapper .zip {
+  background: url(images/file-zip.png) no-repeat center left;
+}
+div#wrapper .important {
+  background: #f5f5dc url(images/important.png) no-repeat 0.5em center;
+  border-bottom: 1px solid #d0d0bb;
+  border-top: 1px solid #d0d0bb;
+  padding: 0.2em 0.5em 0.2em 2.2em;
+}
+
+body div#content .entry-title {
+  line-height: 150%;
+}
+
+div#content div#post-0 .entry-title {
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0 0 -0.7em;
+}
+
+div#content div#post-0 {
+  text-align: center;
+}
+
+div#content div#post-0 form#searchform input#s {
+  width: 50%;
+}
+
+body.attachment div.attachment div.entry-caption {
+  font-size: 1.2em;
+  font-style: italic;
+  margin: 1em 0 2em 0;
+}
+
+div.entry-attachment,
+div.entry-caption {
+  text-align: center;
+}
+
+div.entry-attachment img,
+div#nav-images div img {
+  overflow: hidden;
+}
+
+body.attachment div#wrapper div#content div#nav-images {
+  clear: both;
+  width: 100%;
+}
+
+body.attachment div#nav-images div {
+  padding: 2% 2% 4% 2%;
+  width: 46%;
+}
+
+body.attachment div#nav-images div.nav-previous {
+  text-align: right;
+}
+
+body.attachment div#nav-images div.nav-next {
+  text-align: left;
+}
+
+body.attachment div.entry-meta,
+body.attachment div#comments {
+  clear: both;
+}
+
+div#container div.hentry {
+  clear: both;
+}
+
+/* 首页文章列表 */
+.home div#container div.hentry {
+  clear: none;
+  float: left;
+  width: 540px;
+}
+.home div#content h2.entry-title {
+  height: 25px;
+}
+.home div#content div.entry-content {
+  height: 260px;
+}
+
+div.hentry .entry-date {
+  font-weight: 700;
+  word-spacing: 0.2em;
+}
+
+body.attachment div.entry-content div.attachment-content p,
+div.comments ol.commentlist li p,
+div.formcontainer form#commentform div#comment-notes {
+  margin: 0.5em 0;
+}
+
+div.post-content .entry-title {
+  font-size: 1.2em;
+}
+
+div.comments h3,
+body.archive h2.page-title,
+body.search h2.page-title,
+div.comments h3.comment-header span.comment-count span.meta-sep,
+body h2.page-title span.archive-meta span.meta-sep,
+body div.entry-date span.meta-sep {
+  font-weight: 400;
+}
+
+div.entry-content div.page-link,
+div.entry-content span.more-link {
+  font-variant: small-caps;
+  font-weight: 700;
+}
+
+/* right-menu */
+#right-menu {
+  width: 180px;
+  position: absolute;
+  top: 32px;
+  right: 0;
+}
+#right-menu li {
+  height: 40px;
+  margin: 10px 0 0;
+  border-radius: 5px 0 0 4px;
+  list-style: none;
+}
+#right-menu li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  background: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+#right-menu li a:hover {
+  background: #eee;
+  color: #333;
+  opacity: 1;
+}
+
+/* entry-content & comments */
+div.entry-content blockquote,
+div.comments ol.commentlist li blockquote {
+  margin: 10px 100px 10px 10px;
+  padding: 1px 15px;
+  border-radius: 8px;
+  /*border-left: 3px solid #cfd5dd;*/
+  background: #f2f2f2;
+  font-size: 14px;
+  font-family: sans-serif !important;
+}
+
+div.entry-content code,
+div.entry-content pre {
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+}
+div.entry-content code {
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+div.comments ol.commentlist li code,
+div.comments ol.commentlist li pre {
+  font: 1em/150% Arial;
+  display: block;
+  background-color: #f2f7f9;
+  margin: 10px 20px;
+  padding: 10px;
+  border-left: 3px solid #f9903f;
+  color: #0088ff;
+}
+div.entry-content ins,
+div.comments ol.commentlist li ins {
+  background: #cfd5dd;
+  color: #000;
+  font-style: italic;
+  text-decoration: none;
+}
+div.entry-content .caps,
+div.comments ol.commentlist li .caps {
+  font-variant: small-caps;
+}
+h2.page-title span.archive-meta,
+div.comments h3.comment-header span.comment-count {
+  color: #888;
+  display: block;
+  font-size: 0.6em;
+  font-weight: 700;
+  margin: 0 0 0.5em;
+  word-spacing: 0.2em;
+}
+
+/* entry-content */
+div.entry-content {
+  overflow: hidden;
+  font-family: "LXGW WenKai", PingfangSC-light;
+  font-size: 16px;
+}
+div.entry-content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+div.entry-content th,
+div.entry-content td {
+  border: 1px solid #e6e6e6;
+  padding: 5px;
+}
+div.entry-content th {
+  background: #f2f2f2;
+}
+div.entry-content h1,
+div.entry-content h2,
+div.entry-content h3,
+div.entry-content h4,
+div.entry-content h4,
+div.entry-content h5,
+div.entry-content h6 {
+  font-size: 1.8em;
+  margin: 1em 0 0.5em;
+  font-weight: normal;
+  font-family: sans-serif !important;
+  line-height: 120%;
+}
+div.entry-content h1 {
+  border-top: 1px dashed #e0e0e0;
+  padding-top: 20px;
+}
+div.entry-content h2 {
+  font-size: 1.65em;
+}
+div.entry-content h3 {
+  font-size: 1.5em;
+}
+div.entry-content h4 {
+  font-size: 1.35em;
+}
+div.entry-content h5 {
+  font-size: 1.2em;
+}
+div.entry-content h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+div.entry-content img {
+  overflow: hidden;
+  max-width: 100%;
+}
+.home div.entry-content img {
+  max-height: 210px;
+  width: 100%;
+}
+div.entry-content .alignleft,
+img.alignleft {
+  float: left;
+  margin: 0.5em 1em 0.5em 0;
+}
+div.entry-content .alignright,
+img.alignright {
+  float: right;
+  margin: 0.5em 0 0.5em 1em;
+}
+div.entry-content .center,
+div.entry-content .aligncenter,
+img.aligncenter {
+  display: block;
+  margin: 0.5em auto;
+  text-align: center;
+}
+div.entry-content p.entry-edit,
+div.entry-content .clearer {
+  clear: both;
+  width: 99%;
+}
+div.entry-content p {
+  margin: 1em 0;
+}
+div.entry-content span.tag-links {
+  margin: 0.5em 0;
+  display: block;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+div.entry-content .content-column {
+  width: 40%;
+}
+div.entry-content ul {
+  padding: 0 0 0 1.5em;
+  list-style: circle;
+}
+div.entry-content ol {
+  padding: 0 0 0 1.5em;
+  list-style: decimal;
+}
+div.entry-content li {
+  padding: 0;
+}
+div.entry-content ul.xoxo h3 {
+  margin: 1em 0 0;
+}
+div.entry-content ul.xoxo,
+div.entry-content ul.xoxo li {
+  list-style: none;
+  padding: 0;
+}
+div.entry-content ul.xoxo li ul {
+  margin: 0 0 0 2em;
+  padding: 0;
+}
+div.entry-content ul.xoxo li ul li span.entry-date {
+  font-weight: normal;
+}
+div.entry-content ul.xoxo li ul li p {
+  margin-top: 0;
+  font-style: italic;
+}
+div.entry-content ul.xoxo li ul li ul {
+  margin-bottom: 0.2em;
+}
+div.entry-content .wp-caption-text {
+  font-style: italic;
+  margin: 0.2em auto 1em auto;
+  text-align: center;
+}
+div.entry-content div.gallery {
+  clear: both;
+  float: left;
+  margin: 1em auto;
+  text-align: center;
+  width: 100%;
+}
+div.entry-content div.gallery dl {
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+}
+div.entry-content div.gallery dl.gallery-columns-2 {
+  width: 49%;
+}
+div.entry-content div.gallery dl.gallery-columns-3 {
+  width: 33%;
+}
+div.entry-content div.gallery dl.gallery-columns-4 {
+  width: 24%;
+}
+div.entry-content div.gallery dl.gallery-columns-5 {
+  width: 19%;
+}
+div.entry-content div.gallery dd {
+  font-style: italic;
+  margin: 0 auto 1em auto;
+  text-align: center;
+}
+div.entry-content div.gallery * {
+  padding: 0;
+}
+div.entry-content hr {
+  border: 0;
+  border-bottom: 1px dashed #e0e0e0;
+  width: 80%;
+  margin: 10px 0;
+}
+div.entry-content em {
+  font-size: 14px;
+  color: #999;
+}
+
+/* 分类信息 评论 使用无线衬字体 */
+div.entry-meta span.entry-category,
+div.entry-meta span.entry-comments {
+  font-family: sans-serif !important;
+}
+
+/* special */
+#header-video {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  height: 97px;
+}
+#header-video:hover {
+  height: 200px;
+}
