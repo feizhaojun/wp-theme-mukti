@@ -10,7 +10,6 @@
       版权所有
     </span>
     <span class="meta-sep">|</span>
-    <a href="https://beian.miit.gov.cn/">京ICP备08104328号-10</a>
 		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-left') ) : // Begin Widgets; displays widgets or default contents below ?>
       <!-- TODO: -->
       <!-- <span>您可以在“后台→外观→小工具”配置此处文本</span> -->
