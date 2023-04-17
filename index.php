@@ -3,7 +3,8 @@
 <div class="list">
   <h2>
     <?php
-      // 标题设置条件 Conditional Tags
+      // 标题设置条件
+      // Conditional Tags 判断页面类型
       switch (true) {
         case is_home():
         case is_front_page():

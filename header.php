@@ -8,21 +8,79 @@
   <!-- TODO: _e -->
   <title>
     <?php
-      if ( is_404() ) :
-        _e('Page not found');
-      elseif ( is_home() ) :
-        bloginfo('name');
-        echo ' - ';
-        bloginfo('description');
-      elseif ( is_category() ) :
-        echo single_cat_title();
-      elseif ( is_date() ) :
-        _e('Blog archives');
-      elseif ( is_search() ) :
-        _e('Search results');
-      else :
-        the_title();
-      endif 
+      // 标题设置条件
+      // Conditional Tags 判断页面类型
+      switch (true) {
+        case is_home():
+          bloginfo('name');
+          echo ' - ';
+          bloginfo('description');
+          break;
+        case is_front_page():
+        case is_admin():
+        case is_search():
+          _e('Search');
+          echo "：" . _wp_specialchars(stripslashes($_GET['s']), true);
+          echo ' - ';
+          bloginfo('name');
+          break;
+        case is_404():
+          _e('Page not found');
+          echo ' - ';
+          bloginfo('name');
+          break;
+        case is_single():
+        case is_attachment():
+        case is_page():
+        case is_singular():
+          the_title();
+          echo ' - by ';
+          bloginfo('name');
+          break;
+        case is_category():
+          echo _e('Categories') . ': ';
+          single_cat_title();
+          echo ' - ';
+          bloginfo('name');
+          break;
+        case is_date():
+        case is_year():
+        case is_month():
+        case is_day():
+        case is_time():
+        case is_new_day():
+          echo _e('Blog Archives');
+          echo ' - ';
+          bloginfo('name');
+          break;
+        case is_tag():
+          echo _e('Tags') . ': ';
+          single_tag_title();
+          echo ' - ';
+          bloginfo('name');
+          break;
+        // case is_tax():
+        //   break;
+        case is_author():
+          echo '来自 ' . get_the_author() . ' 的文章';
+          echo ' - ';
+          bloginfo('name');
+          break;
+        // case is_archive():
+        //   break;
+        // case is_privacy_policy():
+        //   break;
+        // case is_feed():
+        //   break;
+        // case is_trackback():
+        //   break;
+        // case is_preview():
+        //   break;
+        default:
+          the_title();
+          echo ' - ';
+          bloginfo('name');
+      }
     ?>
   </title>
   <!-- TODO: -->
