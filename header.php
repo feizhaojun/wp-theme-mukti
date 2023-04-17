@@ -19,9 +19,7 @@
         case is_front_page():
         case is_admin():
         case is_search():
-          _e('Search');
-          echo "：" . _wp_specialchars(stripslashes($_GET['s']), true);
-          echo ' - ';
+          echo _wp_specialchars(stripslashes($_GET['s']), true) . ' - ' . _e('Search') . ' - ';
           bloginfo('name');
           break;
         case is_404():
@@ -38,9 +36,8 @@
           bloginfo('name');
           break;
         case is_category():
-          echo _e('Categories') . ': ';
           single_cat_title();
-          echo ' - ';
+          echo ' - ' . _e('Categories') . ' - ';
           bloginfo('name');
           break;
         case is_date():
@@ -54,8 +51,8 @@
           bloginfo('name');
           break;
         case is_tag():
-          echo _e('Tags') . ': ';
           single_tag_title();
+          echo ' - ' . _e('Tags') . ' - ';
           echo ' - ';
           bloginfo('name');
           break;
