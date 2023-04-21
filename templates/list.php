@@ -1,11 +1,18 @@
 <!-- <div class="list"> -->
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <div id="post-<?php the_ID() ?>" class="list-item <?php barthelme_post_class() ?>">
-        <!-- TODO: -->
-        <?php the_post_thumbnail(); ?>
         <h3><a href="<?php the_permalink() ?>" title="<?php echo _wp_specialchars(get_the_title()); ?>" rel="bookmark"><?php the_title() ?></a></h3>
         <!-- <div class="list-excerpt"><?php the_excerpt(); ?></div> -->
-        <div class="list-excerpt"><?php the_content(); ?></div>
+        <div class="list-excerpt">
+          <?php if ( has_post_thumbnail() ) { ?>
+            <div class="list-thumb">
+              <?php the_post_thumbnail('', 'style=width:100%;height:auto;'); ?>
+            </div>
+          <?php } ?>
+          <div class="list-text">
+            <?php the_content(); ?>
+          </div>
+        </div>
         <div class="list-item-meta">
           <?php
             the_category(', ');

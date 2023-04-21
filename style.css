@@ -446,8 +446,21 @@ div#container div#content div#main div.entry div.entry-content {
   font-size: 16px;
   position: relative;
 }
+div#container div#content div#main div.entry div.entry-content em {
+  font-size: 14px;
+  color: #999;
+}
 div#container div#content div#main div.entry div.entry-content pre code {
   line-height: 120%;
+  font-size: 14px;
+}
+div#container div#content div#main div.entry div.entry-content p code {
+  display: inline-block;
+  line-height: 100%;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #f5f6f7;
+  color: var(--primary-color);
   font-size: 14px;
 }
 /* -- Donate -- */
@@ -519,17 +532,25 @@ div.list div.list-item {
   position: relative;
 }
 div.list div.list-item div.list-excerpt {
+  display: flex;
   height: 171px;
   line-height: 182%;
   padding: 8px 0;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
+  /* display: -webkit-box; */
   -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
 }
+div.list div.list-item div.list-excerpt div.list-thumb{
+  min-width: 256px;
+  padding-top: 4px;
+}
 div.list div.list-item div.list-excerpt img{
   max-width: 144px;
+}
+div.list div.list-item div.list-excerpt div.list-thumb img{
+  max-width: 240px;
 }
 div.list div.list-item div.list-item-meta{
   height: 16px;
