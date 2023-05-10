@@ -1,6 +1,42 @@
 <?php
-
+// TODO: Just a test.
 include_once get_template_directory() . '/widgets/foo-widget.php'; //  最新评论
+
+// Public: cURL
+if (!function_exists('curl_post')) {
+  function curl_post($post_url, $post_data) {
+      $ch= curl_init();
+      $header[] = "";
+      curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+      curl_setopt($ch, CURLOPT_URL, $post_url);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      curl_setopt($ch, CURLOPT_POST, 1);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+      curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36');
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+      $output = curl_exec($ch);
+      curl_close($ch);
+      return $output;
+  }
+}
+
+// 评论推送通知到企业微信机器人
+function mukti_qy_notice($comment_id){
+  $comment = get_comment($comment_id);
+  $content = $comment->comment_content;
+  $datetime  = $comment->comment_date;
+  $author = $comment->comment_author;
+  $title = get_the_title($comment->comment_post_ID);
+  // $site_name = get_bloginfo('name');
+  $url = get_bloginfo('url') . '/?=' . $comment->comment_post_ID;
+  // 企业微信机器人 webhook url
+  $webhook  = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b930b446-184c-4742-ad37-af9fa20f1ff0";
+  $data = '{"msgtype": "text","text": {"content": "' . $datetime .'\n' . $author . '评论《' . $title . '》：' . $content . '\n' . $url . '"}}';
+  return $res = curl_post($webhook, $data);
+}
+// TODO: 19, 2 什么意思？
+add_action('comment_post', 'mukti_qy_notice', 19, 2);
 
 /**
  * 替换 gravatar 服务器
