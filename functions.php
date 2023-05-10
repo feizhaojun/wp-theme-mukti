@@ -22,6 +22,7 @@ if (!function_exists('curl_post')) {
 }
 
 // 评论推送通知到企业微信机器人
+// TODO: 做成可配置
 function mukti_qy_notice($comment_id){
   $comment = get_comment($comment_id);
   $content = $comment->comment_content;
