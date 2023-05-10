@@ -5,7 +5,7 @@
     <!-- TODO: the_post -->
     <?php echo the_post(); ?>
     
-    <h2 class="entry-title"><?php the_title(); ?></h2>
+    <h1 class="entry-title"><?php the_title(); ?></h1>
 
     <div class="entry-meta" style="text-align:left;">
       <?php if ( is_single() && !is_attachment() ):

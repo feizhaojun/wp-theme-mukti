@@ -1,6 +1,26 @@
 <?php
 
-include_once get_template_directory() . '/widgets/foo-widget.php';//最新评论
+include_once get_template_directory() . '/widgets/foo-widget.php'; //  最新评论
+
+/**
+ * 替换 gravatar 服务器
+ */
+function mukti_get_https_avatar($avatar) {
+    $new_host = 'gravatar.loli.net/avatar';
+    $avatar = str_replace(array(
+        'secure.gravatar.com/avatar',
+        "www.gravatar.com/avatar",
+        "0.gravatar.com/avatar",
+        "1.gravatar.com/avatar",
+        "2.gravatar.com/avatar"
+    ), $new_host, $avatar);
+    $avatar = str_replace("http://", "https://", $avatar);
+    return $avatar;
+}
+add_filter( 'get_avatar', 'mukti_get_https_avatar');
+add_filter( 'um_user_avatar_url_filter', 'mukti_get_https_avatar', 1 );
+add_filter( 'bp_gravatar_url', 'mukti_get_https_avatar', 1 );
+add_filter( 'get_avatar_url', 'mukti_get_https_avatar', 1 );
 
 /**
  * Filter the "read more" excerpt string link to the post.

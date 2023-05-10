@@ -392,10 +392,20 @@ div.widget_search #searchsubmit:hover {
 }
 /* -- Sidebar Widget End -- */
 /* -- Content -- */
+div#container div#content h1,
+div#container div#content h2,
+div#container div#content h3,
+div#container div#content h4,
+div#container div#content h5,
+div#container div#content h6 {
+  margin: 1em 0 0.5em;
+  font-weight: 400;
+  line-height: 120%;
+}
 div#container div#content h1{
+  font-size: 1.8em;
   border-top: 1px dashed #e0e0e0;
   padding-top: 20px;
-  font-size: 1.8em;
 }
 div#container div#content h2{
   font-size: 1.65em;
@@ -411,6 +421,7 @@ div#container div#content h5{
 }
 div#container div#content h6{
   font-size: 1em;
+  font-weight: bold;
 }
 /* -- Single -- */
 /* Main 的作用是布局，是否可以去掉，只保留下级 entry ? */
@@ -426,11 +437,12 @@ div#container div#content div#main div.entry {
   background: #fff;
   border-radius: 4px;
 }
-/* TODO: h2 - h6 */
-div#container div#content div#main div.entry h2 {
-  font-size: 1.7em;
-  font-weight: 400;
+div#container div#content div#main div.entry .entry-title {
+  margin: 0;
+  padding: 0;
+  border: 0;
   text-align: center;
+  font-family: georgia, times, serif;
 }
 div#container div#content div#main div.entry div.entry-meta {
   line-height: 175%;
@@ -440,6 +452,7 @@ div#container div#content div#main div.entry div.entry-meta {
   border-top: 1px solid #e0e0e0;
   font-size: 12px;
 }
+/* 内容 Content */
 div#container div#content div#main div.entry div.entry-content {
   line-height: 250%;
   font-family: "LXGW WenKai";
@@ -462,6 +475,29 @@ div#container div#content div#main div.entry div.entry-content p code {
   background: #f5f6f7;
   color: var(--primary-color);
   font-size: 14px;
+}
+div#container div#content div#main div.entry div.entry-content ul {
+  line-height: 200%;
+  padding-left: 24px;
+  list-style: circle;
+  font-size: 14px;
+  font-family: PingfangSC-light, sans-serif;
+}
+/* Single Table */
+div#container div#content div#main div.entry div.entry-content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+div#container div#content div#main div.entry div.entry-content th,
+div#container div#content div#main div.entry div.entry-content td {
+  border: 1px solid #e6e6e6;
+  padding: 8px;
+  line-height: 150%;
+  font-family: PingfangSC-light, sans-serif;
+  font-size: 14px;
+}
+div#container div#content div#main div.entry div.entry-content th {
+  background: #f5f6f7;
 }
 /* -- Donate -- */
 .entry-donate {
