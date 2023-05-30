@@ -57,10 +57,10 @@ showBackTop()
 $(window).on('scroll', showBackTop)
 // 回到顶部 - End
 
-// 右侧菜单在新窗口打开
-$('#right-menu a').attr({
-  target: '_blank'
-})
+// // 右侧菜单在新窗口打开
+// $('#right-menu a').attr({
+//   target: '_blank'
+// })
 
 // 在新窗口打开外链
 $('a').each(function (el, i) {

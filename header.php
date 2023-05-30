@@ -91,7 +91,7 @@
   <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php bloginfo('name') ?> <?php _e('RSS feed' ) ?>" />
   <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php bloginfo('name') ?> <?php _e( 'comments RSS feed' ) ?>" />
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" media="screen,projection" href="<?php bloginfo('stylesheet_url'); ?>?202304222051" title="Mukti" />
+  <link rel="stylesheet" type="text/css" media="screen,projection" href="<?php bloginfo('stylesheet_url'); ?>?202305291831" title="Mukti" />
   <!-- <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_stylesheet_uri() ); ?>" /> -->
   <link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo('template_directory'); ?>/print.css" />
   <!-- 落鹜文楷字体 -->
@@ -109,6 +109,18 @@
 	</div>
   <div id="container">
     <div id="content">
+      <div class="menu">
+        <?php
+          wp_nav_menu(
+            array(
+              'theme_location'=>'top-menu',
+              'menu_class'=>'top-menu',
+              'menu_id'=>'top-menu',
+              'container'=>'ul'
+            )
+          );
+        ?>
+      </div>
 
 <!-- TODO: -->
 	<!-- <div class="access">
@@ -122,16 +134,4 @@
 <?php
 // TODO:
 	// barthelme_globalnav(); // Adds list of pages just below header
-?>
-
-<?php
-// TODO:
-	// wp_nav_menu(
-	// 	array(
-	// 		'theme_location'=>'right-menu',
-  //       	'menu_class'=>'right-menu',
-  //       	'menu_id'=>'right-menu',
-  //       	'container'=>'ul'
-  //       )
-	// );
 ?>

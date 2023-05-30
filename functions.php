@@ -60,6 +60,17 @@ add_filter( 'bp_gravatar_url', 'mukti_get_https_avatar', 1 );
 add_filter( 'get_avatar_url', 'mukti_get_https_avatar', 1 );
 
 /**
+ * 注册菜单
+ */
+register_nav_menus(array(
+  'top-menu' => __( 'Top Menu' ),
+));
+// TODO: 未使用
+register_nav_menus(array(
+  'right-menu' => __( 'Right Menu' ),
+));
+
+/**
  * Filter the "read more" excerpt string link to the post.
  *
  * @param string $more "Read more" excerpt string.
@@ -871,8 +882,4 @@ add_filter('archive_meta', 'wpautop');
 
 // Readies for translation.
 // load_theme_textdomain( 'mukti', get_template_directory() . '/languages' );
-
-register_nav_menus(array(
-  'right-menu' => __( 'Right Menu' ),
-));
 ?>

@@ -423,6 +423,29 @@ div#container div#content h6{
   font-size: 1em;
   font-weight: bold;
 }
+/* -- Top Menu -- */
+.top-menu {
+  background: #f5f6f7;
+  margin: 0;
+  height: 36px;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+.top-menu li {
+  float: left;
+}
+.top-menu li a{
+  display: inline-block;
+  line-height: 36px;
+  padding: 0 24px;
+  border-right: 1px solid #eee;
+  color: #7f89a6;
+  font-size: 14px;
+}
+.top-menu li a:hover{
+  background: #bbc8d9;
+  color: #fff !important;
+}
 /* -- Single -- */
 /* Main 的作用是布局，是否可以去掉，只保留下级 entry ? */
 div#container div#content div#main {

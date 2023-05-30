@@ -20,7 +20,71 @@
     </div>
     <!-- TODO: -->
     <div class="entry-content">
+      <?php
+        if (preg_match('/\.zaodianying\.com$/',$_SERVER['HTTP_HOST'])) {
+      ?>
+        <p><em>下面有百度和夸克，百度网盘太龟速了，优先推荐使用夸克网盘（没注册过也没关系，输入手机号5秒搞定）！</em></p>
+        <p>资源有版权属性，如果失效可以扫下方二维码到公众号留言，小编会尽快回复。</p>
+      <?php
+        }
+      ?>
+      <?php
+        if (preg_match('/book\.feizhaojun\.com$/', $_SERVER['HTTP_HOST'])) {
+      ?>
+        <p>本站资源全部使用夸克网盘，相较于其他网盘，在未注册的情况下下载步骤最少。</p>
+      <?php
+        }
+      ?>
       <?php the_content('<span class="more-link">'.__('Continue reading &rsaquo;', 'mukti').'</span>'); ?>
+      <?php
+        if (preg_match('/\.zaodianying\.com$/', $_SERVER['HTTP_HOST'])) {
+      ?>
+        <p>资源整理自公众号，自愿扫码关注：<span style="color:#888;">（可以直接回复名称获取影视资源）</span></p>
+        <p><img decoding="async" src="https://www.zaodianying.com/wp-content/uploads/2023/05/wx-300x300.jpg" alt="造电影"></p>
+      <?php
+        }
+      ?>
+      <?php
+        if (preg_match('/book\.feizhaojun\.com$/', $_SERVER['HTTP_HOST'])) {
+      ?>
+        <p>【留言求书】和【资源失效反馈】，请扫码关注公众号：</p>
+        <p><img decoding="async" src="https://feizhaojun.com/wp-content/uploads/2019/04/qrcode.png" alt="五道口乐哥" /></p>
+      <?php
+        }
+      ?>
+      <!-- TODO: 改为可配置 -->
+      <div class="entry-donate">
+        <p>
+          <?php
+            if (preg_match('/\.zaodianying\.com$/',$_SERVER['HTTP_HOST'])) {
+              echo '个人整理资源不易，扫码打赏';
+            } elseif (preg_match('/book\.feizhaojun\.com$/',$_SERVER['HTTP_HOST'])) {
+              echo '个人整理资源不易，扫码打赏';
+            } else {
+              echo '您的赞助将会支持作者创作及本站运维';
+            }
+          ?>
+        </p>
+        <?php
+          if ( strpos($_SERVER["HTTP_USER_AGENT"], 'MicroMessenger') === false) {
+        ?>
+          <div class="donate-item">
+            <p><img src="<?php echo get_theme_file_uri("/assets/images/wxpay-qrcode.png"); ?>" /></p>
+          </div>
+          <div class="donate-item">
+            <p><img src="<?php echo get_theme_file_uri("/assets/images/alipay-qrcode.png"); ?>" /></p>
+          </div>
+        <?php
+          } else {
+        ?>
+          <div class="donate-item">
+            <p><img src="https://cdn.feizhaojun.com/wx-donate.png" /></p>
+          </div>
+        <?php
+          }
+        ?>
+      </div>
+
       <!-- TODO: WordPress模板标签wp_link_pages用于输出文章内容翻页，需要在文章内容中插入<!–nextpage–>标签。 -->
       <!-- <?php wp_link_pages(); ?> -->
       <?php wp_link_pages( array(
@@ -30,16 +94,6 @@
         'link_after'  => '</span>',
         ) ); ?>
       <?php edit_post_link(__('Edit'),'<p>','</p>'); ?>
-    </div>
-    <!-- TODO: 改为可配置 -->
-    <div class="entry-donate">
-      <p>您的赞助将会支持作者创作及本站运维</p>
-      <div class="donate-item">
-        <p><img src="<?php echo get_theme_file_uri("/assets/images/wxpay-qrcode.png"); ?>" /></p>
-      </div>
-      <div class="donate-item">
-        <p><img src="<?php echo get_theme_file_uri("/assets/images/alipay-qrcode.png"); ?>" /></p>
-      </div>
     </div>
     <div class="navigation">
       <div class="nav-prev"><?php previous_post_link(__('&laquo; 上一篇：%link')) ?></div>
