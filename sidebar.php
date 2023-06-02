@@ -1,7 +1,7 @@
 <div id="sidebar" class="sidebar">
   <!-- TODO: 放在 Widgets 连同 CSS -->
   <div class="avatar">
-    <a href="//feizhaojun.com"></a>
+    <a href="/"></a>
   </div>
   <!-- TODO: 小工具 -->
   <div class="side-box">

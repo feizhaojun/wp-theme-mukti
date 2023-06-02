@@ -411,11 +411,16 @@ msgstr ""
 #: functions.php:459
 #: functions.php:501
 msgid "Barthelme Theme Options"
-msgstr "Mukti 主题设置"
+msgstr "Mukti 主题选项"
 
 #: functions.php:459
 msgid "Theme Options"
-msgstr ""
+msgstr "主题选项"
+
+msgid "Barthelme Theme Settings"
+msgstr "Mukti 主题设置"
+msgid "Theme Settings"
+msgstr "主题设置"
 
 #: functions.php:497
 #, php-format
