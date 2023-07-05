@@ -23,8 +23,10 @@
       <?php
         if (preg_match('/\.zaodianying\.com$/',$_SERVER['HTTP_HOST'])) {
       ?>
-        <p><em>下面有百度和夸克，百度网盘太龟速了，优先推荐使用夸克网盘（没注册过也没关系，输入手机号5秒搞定）！</em></p>
-        <p>资源有版权属性，如果失效可以扫下方二维码到公众号留言，小编会尽快回复。</p>
+        <h2>说明</h2>
+        <p><em>优先推荐夸克网盘（没注册过也没关系，输入手机号5秒搞定）</em></p>
+        <p>资源有版权属性，如果失效可以扫下方二维码到公众号留言，也可以直接通过发送影视名称搜索资源：</p>
+        <p><img decoding="async" src="https://www.zaodianying.com/wp-content/uploads/2023/06/qrcode.jpg" style="width:160px;" alt="造电影"></p>
       <?php
         }
       ?>
@@ -39,8 +41,6 @@
       <?php
         if (preg_match('/\.zaodianying\.com$/', $_SERVER['HTTP_HOST'])) {
       ?>
-        <p>资源整理自公众号，自愿扫码关注：<span style="color:#888;">（可以直接回复名称获取影视资源）</span></p>
-        <p><img decoding="async" src="https://www.zaodianying.com/wp-content/uploads/2023/05/wx-300x300.jpg" alt="造电影"></p>
       <?php
         }
       ?>

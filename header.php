@@ -33,7 +33,7 @@
         case is_page():
         case is_singular():
           the_title();
-          echo ' - by ';
+          echo ' - ';
           bloginfo('name');
           break;
         case is_category():
