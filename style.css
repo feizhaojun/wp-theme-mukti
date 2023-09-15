@@ -428,7 +428,6 @@ div#container div#content h6{
   background: #f9fafb;
   margin: 0;
   height: 36px;
-  border-bottom: 1px solid #eee;
   overflow: hidden;
 }
 .top-menu li {
@@ -438,7 +437,6 @@ div#container div#content h6{
   display: inline-block;
   line-height: 36px;
   padding: 0 24px;
-  border-right: 1px solid #eee;
   color: #7f89a6;
   font-size: 14px;
 }
