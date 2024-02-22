@@ -231,7 +231,7 @@ function mukti_settings_add_admin() {
     if ( isset($_REQUEST['action']) && 'save' == $_REQUEST['action'] ) {
       check_admin_referer('mukti_save_settings');
       update_option( 'mukti_main_avatar', strip_tags( stripslashes( $_REQUEST['main_avatar'] ) ) );
-      update_option( 'mukti_tj_code', $_REQUEST['tj_code'] );
+      update_option( 'mukti_tj_code', stripslashes( $_REQUEST['tj_code'] ) );
       header("Location: themes.php?page=mukti_settings&saved=true");
       die;
     } elseif ( isset($_REQUEST['action']) && 'reset' == $_REQUEST['action'] ) {
