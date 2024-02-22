@@ -28,6 +28,8 @@
       <!-- TODO: -->
       <!-- <span>您可以在“后台→外观→小工具”配置此处文本</span> -->
 		<?php endif; // End Widgets ?>
+    <!-- 设置的统计代码 -->
+    <?php echo get_option('mukti_tj_code'); ?>
   </div>
 </div>
 <?php wp_footer() // Do not remove; helps plugins work ?>
@@ -101,15 +103,6 @@ $('a').each(function (el, i) {
 //     }, 200)
 //   }
 // }
-
-// 百度统计 TODO:
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?91c7bd060d2c86b8d6d5994edb756abe";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
 </script>
 </body>
 </html>

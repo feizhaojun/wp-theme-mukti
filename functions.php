@@ -186,6 +186,12 @@ function mukti_settings_admin() {
               <p class="info">网站主图是一张 120 * 240 的图片，均分为上下两部分，鼠标悬停时滑动显示下半部分。</p>
             </td>
           </tr>
+          <tr valign="top">
+            <th scope="row"><label for="tj_code">统计代码</label></th> 
+            <td>
+              <textarea id="tj_code" name="tj_code" style="min-width: 50%; min-height: 96px"><?php echo get_option('mukti_tj_code'); ?></textarea>
+            </td>
+          </tr>
         </table>
 
         <p class="submit">
@@ -225,6 +231,7 @@ function mukti_settings_add_admin() {
     if ( isset($_REQUEST['action']) && 'save' == $_REQUEST['action'] ) {
       check_admin_referer('mukti_save_settings');
       update_option( 'mukti_main_avatar', strip_tags( stripslashes( $_REQUEST['main_avatar'] ) ) );
+      update_option( 'mukti_tj_code', $_REQUEST['tj_code'] );
       header("Location: themes.php?page=mukti_settings&saved=true");
       die;
     } elseif ( isset($_REQUEST['action']) && 'reset' == $_REQUEST['action'] ) {
