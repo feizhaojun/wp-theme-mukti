@@ -52,7 +52,7 @@
     <?php if ( is_home() || is_front_page() ): ?>
     <?php else: ?>
       <div id="post-0" class="list-item <?php barthelme_post_class() ?>" style="height: 90px; padding: 0;">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4343772002824313" crossorigin="anonymous"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4343772002824313" crossorigin="anonymous" defer></script>
         <!-- 列表和内容页横幅 -->
         <ins class="adsbygoogle"
             style="display:inline-block;width:720px;height:90px"
