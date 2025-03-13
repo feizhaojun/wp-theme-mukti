@@ -115,15 +115,15 @@
         <span class="entry-interact"><?php _e('Both comments and trackbacks are currently closed.', 'mukti') ?></span>
       <?php endif; ?> -->
       <!-- 广告位 -->
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4343772002824313" crossorigin="anonymous" defer></script>
+      <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4343772002824313" crossorigin="anonymous" defer></script> -->
       <!-- 列表和内容页横幅 -->
-      <ins class="adsbygoogle"
+      <!-- <ins class="adsbygoogle"
           style="display:inline-block;width:720px;height:90px"
           data-ad-client="ca-pub-4343772002824313"
           data-ad-slot="4353532533"></ins>
       <script>
           (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+      </script> -->
     </div>
     <?php // If comments are open or we have at least one comment, load up the comment template.
       if ( comments_open() || get_comments_number() ) :
@@ -143,5 +143,30 @@
   */
   get_template_part( 'content', get_post_format() );
 endwhile; ?>
+
+<!-- 电梯导航 -->
+<style>
+div#container div#content {
+  padding-right: 228px;
+}
+</style>
+<script>
+  var headline = $('.entry-content h1, h2, h3, h4, h5, h6');
+  $(function(){
+    if (headline.length > 1) {
+      var elevatorHtml = '<div id="elevator" style="top: ' + ($('#wpadminbar').length ? '40px' : '8px') + ';">'
+      headline.each(function() {
+        elevatorHtml += '<a href="javascript:;" class="' + $(this)[0].nodeName.toLowerCase() + '">' + $(this).text() + '</a>'
+      })
+      elevatorHtml += '</div>'
+      $('body').append(elevatorHtml)
+      $('#elevator a').on('click', function() {
+        $('html, body').animate({
+            scrollTop: $(headline[$(this).index()]).offset().top - ($('#wpadminbar').length ? 48 : 16)
+        }, 300);
+      });
+    }
+  });
+</script>
  
 <?php get_footer(); ?>

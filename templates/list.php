@@ -52,15 +52,15 @@
     <?php if ( is_home() || is_front_page() ): ?>
     <?php else: ?>
       <div id="post-0" class="list-item <?php barthelme_post_class() ?>" style="height: 90px; padding: 0;">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4343772002824313" crossorigin="anonymous" defer></script>
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4343772002824313" crossorigin="anonymous" defer></script> -->
         <!-- 列表和内容页横幅 -->
-        <ins class="adsbygoogle"
+        <!-- <ins class="adsbygoogle"
             style="display:inline-block;width:720px;height:90px"
             data-ad-client="ca-pub-4343772002824313"
             data-ad-slot="4353532533"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        </script> -->
       </div>
     <?php endif; ?>
     <div class="navigation">

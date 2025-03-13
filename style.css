@@ -10,8 +10,8 @@ Text Domain: mukti
 }
 
 @font-face {
-  font-family: annifont;
-  src: url("./annifont.ttf");
+  font-family: anni;
+  src: url("./assets/font/annifont.ttf");
 }
 
 body {
@@ -33,14 +33,20 @@ a:hover,
 div#content a:hover {
   color: #ff4e00;
 }
-ul, ol {
+ul,
+ol {
   list-style: none;
   padding: 0;
 }
 img {
   max-width: 100%;
 }
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   margin: 0;
 }
@@ -88,7 +94,7 @@ div.card-list div.navigation {
   clear: both;
   padding: 8px;
 }
-div.card-list div.navigation a{
+div.card-list div.navigation a {
   display: inline-block;
   padding: 8px 16px;
   margin-right: 8px;
@@ -96,7 +102,7 @@ div.card-list div.navigation a{
   background: var(--primary-light-color);
   color: #fff !important;
 }
-div.card-list div.navigation a:hover{
+div.card-list div.navigation a:hover {
   background: var(--primary-color);
 }
 div#container div#content div.navigation {
@@ -152,12 +158,12 @@ div#header {
 div#header h1 {
   margin: 0;
 }
-div#header h1 a{
+div#header h1 a {
   display: block;
   height: 64px;
   line-height: 64px;
   font-size: 24px;
-  font-family: annifont;
+  font-family: anni;
   font-weight: normal;
   transition: 0.5s;
 }
@@ -230,12 +236,12 @@ div.sidebar {
   font-size: 13px;
 }
 /* -- Side Box -- */
-div.sidebar .side-box .widget{
+div.sidebar .side-box .widget {
   border-top: 1px solid #e0e0e0;
   margin: 16px;
   padding-top: 8px;
 }
-div.sidebar .side-box .widget p{
+div.sidebar .side-box .widget p {
   margin: 0;
 }
 div.sidebar h3 {
@@ -255,7 +261,7 @@ div.sidebar ul li ul {
   padding: 0;
 }
 div.sidebar ul li ul li {
-  margin: 0 0 0 .5em;
+  margin: 0 0 0 0.5em;
 }
 /* -- Sidebar Widget Start -- */
 /* -- Sidebar Avatar -- */
@@ -358,7 +364,7 @@ div.sidebar .avatar a:hover {
   color: #fff;
   font-size: 12px;
 }
-#subscribe-submit button:hover{
+#subscribe-submit button:hover {
   background: var(--primary-color);
 }
 /* -- Sidebar Search -- */
@@ -404,24 +410,24 @@ div#container div#content h6 {
   font-weight: 400;
   line-height: 120%;
 }
-div#container div#content h1{
+div#container div#content h1 {
   font-size: 1.8em;
   border-top: 1px dashed #e0e0e0;
   padding-top: 20px;
 }
-div#container div#content h2{
+div#container div#content h2 {
   font-size: 1.65em;
 }
-div#container div#content h3{
+div#container div#content h3 {
   font-size: 1.5em;
 }
-div#container div#content h4{
+div#container div#content h4 {
   font-size: 1.35em;
 }
-div#container div#content h5{
+div#container div#content h5 {
   font-size: 1.2em;
 }
-div#container div#content h6{
+div#container div#content h6 {
   font-size: 1em;
   font-weight: bold;
 }
@@ -429,20 +435,20 @@ div#container div#content h6{
 .top-menu {
   background: #f9fafb;
   margin: 0;
-  height: 36px;
+  height: 40px;
   overflow: hidden;
 }
 .top-menu li {
   float: left;
 }
-.top-menu li a{
+.top-menu li a {
   display: inline-block;
-  line-height: 36px;
+  line-height: 40px;
   padding: 0 24px;
   color: #7f89a6;
   font-size: 14px;
 }
-.top-menu li a:hover{
+.top-menu li a:hover {
   background: #bbc8d9;
   color: #fff !important;
 }
@@ -485,6 +491,11 @@ div#container div#content div#main div.entry div.entry-content {
 div#container div#content div#main div.entry div.entry-content em {
   font-size: 14px;
   color: #999;
+}
+div#container div#content div#main div.entry div.entry-content img + em,
+div#container div#content div#main div.entry div.entry-content img + br + em {
+  display: inline-block;
+  transform: translateY(-16px);
 }
 div#container div#content div#main div.entry div.entry-content pre code {
   line-height: 120%;
@@ -538,6 +549,55 @@ div#container div#content div#main div.entry div.entry-content th {
   width: 100%;
 }
 
+/* -- 电梯导航 Elevator -- */
+#elevator {
+  position: fixed;
+  right: 12px;
+  top: 64px;
+  line-height: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 16px 8px;
+  width: 200px;
+  overflow-y: scroll;
+  max-height: calc(100vh - 16px);
+}
+#elevator a {
+  display: block;
+  font-size: 16px;
+  height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #666;
+}
+#elevator a:hover {
+  font-weight: 600;
+  color: #7f89a6;
+}
+#elevator a.h1 {
+  font-size: 16 px;
+}
+#elevator a.h2 {
+  margin-left: 8px;
+  font-size: 16px;
+}
+#elevator a.h3 {
+  margin-left: 16px;
+  font-size: 15px;
+}
+#elevator a.h4 {
+  margin-left: 24px;
+  font-size: 14px;
+}
+#elevator a.h5 {
+  margin-left: 28px;
+  font-size: 13px;
+}
+#elevator a.h6 {
+  margin-left: 32px;
+  font-size: 12px;
+}
+
 /* -- Search -- */
 #main-search-input {
   width: 240px;
@@ -559,7 +619,7 @@ div#container div#content div#main div.entry div.entry-content th {
 }
 
 /* -- List -- */
-div.list-item h3{
+div.list-item h3 {
   height: 24px;
   line-height: 24px;
   padding: 0 0 8px 0;
@@ -568,13 +628,13 @@ div.list-item h3{
   overflow: hidden;
   white-space: nowrap;
 }
-div.list-item div.list-item-meta{
+div.list-item div.list-item-meta {
   line-height: 16px;
   padding: 4px 0;
   font-size: 12px;
   color: #666;
 }
-div.list-item div.list-excerpt p{
+div.list-item div.list-excerpt p {
   margin: 0;
 }
 /* -- Normal List -- */
@@ -601,17 +661,17 @@ div.list div.list-item div.list-excerpt {
   -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
 }
-div.list div.list-item div.list-excerpt div.list-thumb{
+div.list div.list-item div.list-excerpt div.list-thumb {
   min-width: 256px;
   padding-top: 4px;
 }
-div.list div.list-item div.list-excerpt img{
+div.list div.list-item div.list-excerpt img {
   max-width: 144px;
 }
-div.list div.list-item div.list-excerpt div.list-thumb img{
+div.list div.list-item div.list-excerpt div.list-thumb img {
   max-width: 240px;
 }
-div.list div.list-item div.list-item-meta{
+div.list div.list-item div.list-item-meta {
   height: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -644,10 +704,10 @@ div.card-list div.list-item div.list-excerpt {
   -webkit-line-clamp: 9;
   -webkit-box-orient: vertical;
 }
-div.card-list div.list-item div.list-excerpt img{
+div.card-list div.list-item div.list-excerpt img {
   max-height: 200px;
 }
-div.card-list div.list-item div.list-item-meta{
+div.card-list div.list-item div.list-item-meta {
   height: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -667,7 +727,7 @@ div.comments ol.comment-list li.bypostauthor {
   margin-top: -8px;
   border-radius: 0 0 4px 4px;
 }
-div.comments ol.comment-list li.bypostauthor div.comment-wrap{
+div.comments ol.comment-list li.bypostauthor div.comment-wrap {
   padding: 12px 16px 12px 64px;
   border-radius: 4px;
   background: #f0f0f0;
@@ -677,8 +737,12 @@ div.comments ol.comment-list li .comment-meta .comment-author {
   font-size: 14px;
   font-weight: 600;
 }
-div.comments ol.comment-list li.bypostauthor .comment-meta .comment-author::after {
-  content: '';
+div.comments
+  ol.comment-list
+  li.bypostauthor
+  .comment-meta
+  .comment-author::after {
+  content: "";
   display: block;
   width: 32px;
   height: 32px;
@@ -688,9 +752,9 @@ div.comments ol.comment-list li.bypostauthor .comment-meta .comment-author::afte
   background: url(./assets/images/reply.svg) no-repeat center center;
   background-size: 100% auto;
   transform: rotateY(180deg) rotate(-75deg);
-  opacity: .5;
+  opacity: 0.5;
 }
-div.comments ol.comment-list li .comment-meta .comment-author img{
+div.comments ol.comment-list li .comment-meta .comment-author img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -707,7 +771,7 @@ div.comments ol.comment-list li .comment-text {
   font-size: 14px;
   padding: 8px 0 0;
 }
-div.comments ol.comment-list li .comment-text p{
+div.comments ol.comment-list li .comment-text p {
   margin: 0;
 }
 /* -- 评论表单 Comment Form -- */
@@ -745,6 +809,14 @@ div.comment-form span.req-field {
 
 /* -- Media Query -- */
 /* TODO: card 宽度改为百分比，根据媒体查询修改 */
+@media screen and (max-width: 1180px) {
+  div#container div#content {
+    padding-right: 0;
+  }
+  #elevator {
+    display: none;
+  }
+}
 @media screen and (max-width: 782px) {
   div#header {
     /* TODO: */
