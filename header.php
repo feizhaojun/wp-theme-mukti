@@ -99,9 +99,6 @@
   <!-- JavaScript -->
   <script src="<?php bloginfo('template_directory'); ?>/assets/jquery.min.js"></script>
   <?php wp_head() // Do not remove; helps plugins work ?>
-  <!-- Google Adsense Start -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4343772002824313" crossorigin="anonymous" defer></script> -->
-  <!-- Google Adsense End -->
 </head>
 <body class="<?php barthelme_body_class() ?>">
 	<div id="header">
