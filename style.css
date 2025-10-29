@@ -705,7 +705,7 @@ div.card-list div.list-item div.list-excerpt {
   -webkit-box-orient: vertical;
 }
 div.card-list div.list-item div.list-excerpt img {
-  max-height: 200px;
+  /* max-height: 200px; */
 }
 div.card-list div.list-item div.list-item-meta {
   height: 16px;

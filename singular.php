@@ -114,16 +114,6 @@
       <?php elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) : ?>
         <span class="entry-interact"><?php _e('Both comments and trackbacks are currently closed.', 'mukti') ?></span>
       <?php endif; ?> -->
-      <!-- 广告位 -->
-      <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4343772002824313" crossorigin="anonymous" defer></script> -->
-      <!-- 列表和内容页横幅 -->
-      <!-- <ins class="adsbygoogle"
-          style="display:inline-block;width:720px;height:90px"
-          data-ad-client="ca-pub-4343772002824313"
-          data-ad-slot="4353532533"></ins>
-      <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-      </script> -->
     </div>
     <?php // If comments are open or we have at least one comment, load up the comment template.
       if ( comments_open() || get_comments_number() ) :
