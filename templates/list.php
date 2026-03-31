@@ -2,7 +2,7 @@
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <div id="post-<?php the_ID() ?>" class="list-item <?php barthelme_post_class() ?>">
         <h3><a href="<?php the_permalink() ?>" title="<?php echo _wp_specialchars(get_the_title()); ?>" rel="bookmark"><?php the_title() ?></a></h3>
-        <!-- <div class="list-excerpt"><?php the_excerpt(); ?></div> -->
+        <!-- <div class="list-excerpt"><?php //the_excerpt(); ?></div> -->
         <div class="list-excerpt">
           <?php if ( has_post_thumbnail() ) { ?>
             <div class="list-thumb">
@@ -10,7 +10,10 @@
             </div>
           <?php } ?>
           <div class="list-text">
-            <?php the_content(); ?>
+            <?php
+              //the_content();
+              the_excerpt();
+            ?>
           </div>
         </div>
         <div class="list-item-meta">

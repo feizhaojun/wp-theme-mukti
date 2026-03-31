@@ -141,18 +141,18 @@ div#container div#content {
 }
 </style>
 <script>
-  var headline = $('.entry-content h1, h2, h3, h4, h5, h6');
-  $(function(){
+  var headline = jQuery('.entry-content h1, h2, h3, h4, h5, h6');
+  jQuery(function(){
     if (headline.length > 1) {
-      var elevatorHtml = '<div id="elevator" style="top: ' + ($('#wpadminbar').length ? '40px' : '8px') + ';">'
+      var elevatorHtml = '<div id="elevator" style="top: ' + (jQuery('#wpadminbar').length ? '40px' : '8px') + ';">'
       headline.each(function() {
-        elevatorHtml += '<a href="javascript:;" class="' + $(this)[0].nodeName.toLowerCase() + '">' + $(this).text() + '</a>'
+        elevatorHtml += '<a href="javascript:;" class="' + jQuery(this)[0].nodeName.toLowerCase() + '">' + jQuery(this).text() + '</a>'
       })
       elevatorHtml += '</div>'
-      $('body').append(elevatorHtml)
-      $('#elevator a').on('click', function() {
-        $('html, body').animate({
-            scrollTop: $(headline[$(this).index()]).offset().top - ($('#wpadminbar').length ? 48 : 16)
+      jQuery('body').append(elevatorHtml)
+      jQuery('#elevator a').on('click', function() {
+        jQuery('html, body').animate({
+            scrollTop: jQuery(headline[jQuery(this).index()]).offset().top - (jQuery('#wpadminbar').length ? 48 : 16)
         }, 300);
       });
     }

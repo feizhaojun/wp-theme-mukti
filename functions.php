@@ -1027,4 +1027,39 @@ add_filter('archive_meta', 'wpautop');
 
 // Readies for translation.
 // load_theme_textdomain( 'mukti', get_template_directory() . '/languages' );
+
+/**
+ * 为 REST API 搜索端点添加作者过滤支持
+ */
+add_filter('rest_post_search_query', function($args, $request) {
+  // print_r($request);
+  // print_r($args);
+    // 检查请求中是否存在 author 参数
+    if ( isset( $request['author'] ) ) {
+      // 将作者参数添加到 WP_Query 参数数组中
+      // 支持单个 ID (如 ?author=1) 或逗号分隔的字符串 (如 ?author=1,2)
+      $args['author'] = $request['author'];
+    }
+    
+    return $args;
+}, 10, 2 );
+
+// 重新定义摘要
+function custom_auto_excerpt($excerpt) {
+  if (has_excerpt()) {
+    // 如果有手动摘要，直接返回
+    return $excerpt;
+  }
+  // 如果没有手动摘要，获取全文并截取前 60 个字
+  $content = get_the_content();
+  $content = wp_strip_all_tags($content); // 去除 HTML 标签
+  $trimmed_content = wp_trim_words($content, 60, '...'); 
+  return $trimmed_content;
+}
+add_filter('get_the_excerpt', 'custom_auto_excerpt');
+
+// 将摘要长度设置为 40 个单词（针对中文环境通常建议配合 wp_trim_words）
+add_filter( 'excerpt_length', function($length) {
+    return 40;
+}, 999 );
 ?>

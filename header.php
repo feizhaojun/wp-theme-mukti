@@ -33,7 +33,11 @@
         case is_page():
         case is_singular():
           the_title();
-          echo ' - ';
+          if (preg_match('/\.zaodianying\.com$/',$_SERVER['HTTP_HOST'])) {
+            echo ' 网盘资源 免费下载 - ';
+          } else {
+            echo ' - ';
+          }
           bloginfo('name');
           break;
         case is_category():
@@ -97,7 +101,7 @@
   <!-- 落鹜文楷字体 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" media="print" onload="this.media='all'" />
   <!-- JavaScript -->
-  <script src="<?php bloginfo('template_directory'); ?>/assets/jquery.min.js"></script>
+  <!-- <script src="<?php bloginfo('template_directory'); ?>/assets/jquery.min.js"></script> -->
   <?php wp_head() // Do not remove; helps plugins work ?>
 </head>
 <body class="<?php barthelme_body_class() ?>">

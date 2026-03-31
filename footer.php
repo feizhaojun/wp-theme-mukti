@@ -41,65 +41,73 @@
 </a>
 
 <script type="text/javascript">
+// 链接点击拦截
+if (window.location.host.indexOf('zaodianying.com') >= 0) {
+  jQuery('.entry-content a').on('click', function (e) {
+    var target_title = jQuery(this).text()
+    var target_url = jQuery(this).attr('href')
+    LA.track('links_click', {target_title: target_title, target_url: target_url});
+  })
+}
 // 回到顶部 - Start
-$('.back-top').on('click',function(){
-  $('html,body').animate({
+jQuery('.back-top').on('click',function(){
+  jQuery('html,body').animate({
     'scrollTop': 0
   }, 200)
 })
 function showBackTop(t){
-  var t = $('html,body').scrollTop()
+  var t = jQuery('html,body').scrollTop()
   if(t > 100){
-    $('.back-top').css({'display':'block'})
+    jQuery('.back-top').css({'display':'block'})
   }else{
-    $('.back-top').css({'display':'none'})
+    jQuery('.back-top').css({'display':'none'})
   }
 }
 showBackTop()
-$(window).on('scroll', showBackTop)
+jQuery(window).on('scroll', showBackTop)
 // 回到顶部 - End
 
 // // 右侧菜单在新窗口打开
-// $('#right-menu a').attr({
+// jQuery('#right-menu a').attr({
 //   target: '_blank'
 // })
 
 // 在新窗口打开外链
-$('a').each(function (el, i) {
-  if ($(this).attr('href').indexOf('feizhaojun.com') < 0 && $(this).attr('href').indexOf('javascript:;') < 0 && $(this).attr('href').indexOf('#') !== 0) {
-    $(this).attr({target: '_blank'})
+jQuery('a').each(function (el, i) {
+  if (jQuery(this).attr('href').indexOf('feizhaojun.com') < 0 && jQuery(this).attr('href').indexOf('zaodianying.com') < 0 && jQuery(this).attr('href').indexOf('javascript:;') < 0 && jQuery(this).attr('href').indexOf('#') !== 0) {
+    jQuery(this).attr({target: '_blank'})
   }
 })
 
 // 折叠图片 TODO:
-// $('.fold-image-tag').parent().find('img').each(function (i, el) {
-//   var id = 'image-' + $(this).parents('.post').attr('id') + '-' + i
-//   $(this).attr({id: id}).after('<a href="javascript:;" class="show-image-tag" data-id="' + id + '" data-width="' + $(this).width() + '">查看图片</a>').hide().css({width: 0})
+// jQuery('.fold-image-tag').parent().find('img').each(function (i, el) {
+//   var id = 'image-' + jQuery(this).parents('.post').attr('id') + '-' + i
+//   jQuery(this).attr({id: id}).after('<a href="javascript:;" class="show-image-tag" data-id="' + id + '" data-width="' + jQuery(this).width() + '">查看图片</a>').hide().css({width: 0})
 // })
-// $('.show-image-tag').on('click', function () {
-//   $(this).hide()
-//   $('#' + $(this).attr('data-id')).show().animate({width: $(this).attr('data-width')}, 200)
+// jQuery('.show-image-tag').on('click', function () {
+//   jQuery(this).hide()
+//   jQuery('#' + jQuery(this).attr('data-id')).show().animate({width: jQuery(this).attr('data-width')}, 200)
 // })
-// $('.fold-image-tag').parent().find('img').on('click', function () {
-//   $(this).animate({
+// jQuery('.fold-image-tag').parent().find('img').on('click', function () {
+//   jQuery(this).animate({
 //     width: 0
 //   }, 200, function () {
-//     $(this).hide()
+//     jQuery(this).hide()
 //   })
-//   $(this).next('.show-image-tag').show()
+//   jQuery(this).next('.show-image-tag').show()
 // })
 
 // 锚点定位 TODO:
 // focusAnchor()
-// $(window).on('hashchange', focusAnchor)
+// jQuery(window).on('hashchange', focusAnchor)
 // function focusAnchor () {
-//   if (!window.location.href.match(/.*#(.*)$/)) {
+//   if (!window.location.href.match(/.*#(.*)jQuery/)) {
 //     return
 //   }
-//   var locatId = window.location.href.match(/.*#(.*)$/)[1]
-//   if ($('#' + locatId).length) {
-//     $('html,body').animate({
-//       'scrollTop': $('#' + locatId).offset().top - 30
+//   var locatId = window.location.href.match(/.*#(.*)jQuery/)[1]
+//   if (jQuery('#' + locatId).length) {
+//     jQuery('html,body').animate({
+//       'scrollTop': jQuery('#' + locatId).offset().top - 30
 //     }, 200)
 //   }
 // }
